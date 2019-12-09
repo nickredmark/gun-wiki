@@ -44,7 +44,7 @@ export const Wiki = ({ id, priv, epriv, document, onPublish }) => {
     <div className="main">
       <div className="navigation">
         <iframe
-          src={`http://localhost:8081?id=${base}navigation&base=${encodeURIComponent(
+          src={`https://gun-pages.nmaro.now.sh?id=${base}navigation&base=${encodeURIComponent(
             window.location.origin
           )}${s({ priv, epriv }, "#")}`}
           frameBorder="0"
