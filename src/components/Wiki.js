@@ -56,10 +56,9 @@ export const Wiki = ({ id, priv, epriv, document, onPublish }) => {
       </div>
       <div className="page">
         <iframe
-          src={`https://gun-pages.nmaro.now.sh?id=${id}${s(
-            { priv, epriv },
-            "#"
-          )}`}
+          src={`https://gun-pages.nmaro.now.sh?id=${id}&base=${encodeURIComponent(
+            window.location.origin
+          )}${s({ priv, epriv }, "#")}`}
           frameBorder="0"
         />
       </div>
