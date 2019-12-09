@@ -13,7 +13,7 @@ export const GunWiki = ({ id, priv, epriv }) => {
   const [gun, setGun] = useState(null);
   const pub = getPub(id);
   const pair = pub && priv && { pub, priv, epriv };
-  const [data, onData, put] = useGun(Gun, gun, useState, pair);
+  const [data, onData] = useGun(Gun, gun, useState, pair);
 
   useEffect(() => {
     const gun = Gun({
