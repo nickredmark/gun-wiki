@@ -22,6 +22,10 @@ export const Wiki = ({ id, priv, epriv, document, onPublish }) => {
   const title =
     document.title || id.replace(`~${pub}.`, "").replace(`~${pub}`, "");
 
+  useEffect(() => {
+    window.document.title = title;
+  }, [title]);
+
   const hash = s({ priv, epriv }, "#");
   const [md, setMd] = useState();
   useEffect(() => {
